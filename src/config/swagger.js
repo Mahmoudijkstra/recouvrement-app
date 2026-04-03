@@ -32,7 +32,11 @@ const options = {
             last_name: { type: "string", example: "Doe" },
             email: { type: "string", example: "john@company.com" },
             role: { type: "string", example: "agent" },
-            createdAt: { type: "string", format: "date-time", example: "2024-01-01T00:00:00.000Z" },
+            createdAt: {
+              type: "string",
+              format: "date-time",
+              example: "2024-01-01T00:00:00.000Z",
+            },
           },
         },
         Client: {
@@ -45,8 +49,15 @@ const options = {
             phone: { type: "string", example: "+1234567890" },
             address: { type: "string", example: "123 Business Rd" },
             status: { type: "string", example: "active" },
-            assignedAgent: { type: "string", example: "64f1a2b3c4d5e6f7a8b9c0d1" },
-            createdAt: { type: "string", format: "date-time", example: "2024-01-01T00:00:00.000Z" },
+            assignedAgent: {
+              type: "string",
+              example: "64f1a2b3c4d5e6f7a8b9c0d1",
+            },
+            createdAt: {
+              type: "string",
+              format: "date-time",
+              example: "2024-01-01T00:00:00.000Z",
+            },
           },
         },
         Invoice: {
@@ -57,7 +68,11 @@ const options = {
             amount: { type: "number", example: 1500.5 },
             dueDate: { type: "string", format: "date", example: "2024-12-31" },
             status: { type: "string", example: "pending" },
-            createdAt: { type: "string", format: "date-time", example: "2024-01-01T00:00:00.000Z" },
+            createdAt: {
+              type: "string",
+              format: "date-time",
+              example: "2024-01-01T00:00:00.000Z",
+            },
           },
         },
         Payment: {
@@ -66,8 +81,16 @@ const options = {
             _id: { type: "string", example: "64f1a2b3c4d5e6f7a8b9c0d4" },
             invoice: { type: "string", example: "64f1a2b3c4d5e6f7a8b9c0d3" },
             amount: { type: "number", example: 1500.5 },
-            paymentDate: { type: "string", format: "date-time", example: "2024-01-15T10:00:00.000Z" },
-            createdAt: { type: "string", format: "date-time", example: "2024-01-01T00:00:00.000Z" },
+            paymentDate: {
+              type: "string",
+              format: "date-time",
+              example: "2024-01-15T10:00:00.000Z",
+            },
+            createdAt: {
+              type: "string",
+              format: "date-time",
+              example: "2024-01-01T00:00:00.000Z",
+            },
           },
         },
         Action: {
@@ -77,9 +100,20 @@ const options = {
             client: { type: "string", example: "64f1a2b3c4d5e6f7a8b9c0d2" },
             agent: { type: "string", example: "64f1a2b3c4d5e6f7a8b9c0d1" },
             type: { type: "string", example: "call" },
-            notes: { type: "string", example: "Called client about overdue invoice" },
-            actionDate: { type: "string", format: "date-time", example: "2024-01-10T14:30:00.000Z" },
-            createdAt: { type: "string", format: "date-time", example: "2024-01-01T00:00:00.000Z" },
+            notes: {
+              type: "string",
+              example: "Called client about overdue invoice",
+            },
+            actionDate: {
+              type: "string",
+              format: "date-time",
+              example: "2024-01-10T14:30:00.000Z",
+            },
+            createdAt: {
+              type: "string",
+              format: "date-time",
+              example: "2024-01-01T00:00:00.000Z",
+            },
           },
         },
 
@@ -100,6 +134,7 @@ const options = {
             last_name: { type: "string", example: "Doe" },
             email: { type: "string", example: "john@company.com" },
             password: { type: "string", example: "password123" },
+            confirm_password: { type: "string", example: "password123" },
             role: { type: "string", enum: ["agent", "manager", "admin"] },
           },
         },
